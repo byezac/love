@@ -119,15 +119,17 @@ p, img {
 
 
 img {
-  max-width: 100%; 
+  width: 100%; 
   height: auto; 
-  display: block;
-  margin: 0 auto; 
-  user-select: none; 
+  max-width: 100%; 
+  display: block; 
+  margin: 0 auto;
+  object-fit: contain; 
 }
 
 
 .paper.image {
   padding: 10px;
   max-width: 100%; 
-  box-sizing: border-box;
+  box-sizing: border-box; 
+}
