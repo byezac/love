@@ -118,18 +118,31 @@ p, img {
 }
 
 
-img {
-  width: 100%; 
-  height: auto; 
-  max-width: 100%; 
-  display: block; 
-  margin: 0 auto;
-  object-fit: contain; 
+.paper {
+  background: #e2a4a4;
+  background-size: cover; /* Faz o fundo preencher o container sem esticar */
+  background-position: center center; /* Centraliza o fundo */
+  padding: 20px; /* Ajusta o padding para dar espaçamento interno */
+  box-shadow: 1px 15px 20px 0px rgba(0,0,0,0.5);
+  position: relative; /* Usar relativo ao invés de absoluto para evitar esticar */
+  max-width: 100%; /* Impede que o papel exceda a largura da tela */
+  width: auto; /* Permite que a largura seja automática */
+  height: auto; /* Ajusta a altura conforme o conteúdo */
+  margin: 20px auto; /* Centraliza os papéis e dá espaçamento entre eles */
 }
 
+/* Para papéis circulares (como o coração) */
+.paper.heart {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%; /* Garante que o formato seja sempre circular */
+  background-size: contain; /* Evita que o fundo do coração estique */
+}
 
-.paper.image {
-  padding: 10px;
-  max-width: 100%; 
-  box-sizing: border-box; 
+/* Para papéis que contêm imagens */
+.paper.image img {
+  max-width: 100%; /* Ajusta as imagens para se adaptarem ao tamanho do papel */
+  height: auto; /* Mantém a proporção das imagens */
+  display: block;
+  margin: 0 auto;
 }
